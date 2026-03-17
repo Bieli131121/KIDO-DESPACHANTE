@@ -11,6 +11,9 @@
   <meta name="robots" content="index, follow"/>
   <meta property="og:title" content="Kido Despachante – Garopaba/SC"/>
   <meta property="og:description" content="Mais de 37 anos resolvendo sua documentação veicular em Garopaba/SC. Transferência, licenciamento, emplacamento e muito mais."/>
+  <meta property="og:image" content="https://kido-despachante.vercel.app/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="pt_BR"/>
   <meta name="geo.region" content="BR-SC"/>
@@ -879,9 +882,161 @@
     .hero-desc { animation: fadeUp .6s .2s ease both; }
     .hero-btns { animation: fadeUp .6s .3s ease both; }
     .hero-stats { animation: fadeUp .6s .4s ease both; }
+
+    /* ── BARRA DE PROGRESSO ── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--red), #ff6b6b);
+      transition: width 0.1s linear;
+      pointer-events: none;
+    }
+
+    /* ── COOKIE BANNER ── */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998;
+      background: #1a1a1a; color: #eee;
+      padding: 1rem 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+      font-size: .85rem; line-height: 1.5;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+      transform: translateY(100%);
+      transition: transform .4s ease;
+    }
+    #cookie-banner.show { transform: translateY(0); }
+    #cookie-banner a { color: #ff8a80; text-decoration: underline; }
+    .cookie-btn {
+      background: var(--red); color: white; border: none; cursor: pointer;
+      padding: .6rem 1.4rem; border-radius: 5px;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .85rem;
+      white-space: nowrap; flex-shrink: 0;
+      transition: background .2s;
+    }
+    .cookie-btn:hover { background: var(--red-dark); }
+
+    /* ── POPUP DE SAÍDA ── */
+    #exit-popup {
+      display: none;
+      position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0,0,0,.6);
+      align-items: center; justify-content: center;
+      padding: 1rem;
+    }
+    #exit-popup.show { display: flex; }
+    .exit-popup-box {
+      background: white; border-radius: 16px;
+      padding: 2.5rem 2rem; max-width: 420px; width: 100%;
+      text-align: center; position: relative;
+      animation: popIn .3s ease;
+    }
+    @keyframes popIn { from { transform: scale(.85); opacity:0; } to { transform: scale(1); opacity:1; } }
+    .exit-popup-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.4rem; color: #999; line-height: 1;
+    }
+    .exit-popup-icon { font-size: 3rem; margin-bottom: .75rem; }
+    .exit-popup-box h3 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3rem; font-weight: 800;
+      color: var(--gray-dark); margin-bottom: .5rem;
+    }
+    .exit-popup-box p { color: #666; font-size: .9rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .exit-popup-wa {
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      background: #25D366; color: white;
+      padding: .9rem 1.5rem; border-radius: 8px;
+      text-decoration: none; font-family: "Montserrat", sans-serif;
+      font-weight: 700; font-size: 1rem;
+      transition: background .2s, transform .15s;
+    }
+    .exit-popup-wa:hover { background: #1ebe5d; transform: translateY(-1px); }
+
+    /* ── BOTÃO LIGAR MOBILE ── */
+    @media (max-width: 768px) {
+      .call-float { display: flex !important; }
+    }
+
+    /* ── HOVER MELHORADO SERVIÇOS ── */
+    .service-card {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(192,57,43,.15);
+      border-color: var(--red);
+    }
+    .service-card:hover .service-icon { transform: scale(1.15) rotate(-5deg); transition: transform .25s ease; }
+    .service-icon { transition: transform .25s ease; }
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kido Despachante",
+  "image": "https://kido-despachante.vercel.app/favicon.ico",
+  "description": "Mais de 37 anos resolvendo transferência de veículo, licenciamento, emplacamento, multas e documentação em Garopaba/SC.",
+  "@id": "https://kido-despachante.vercel.app",
+  "url": "https://kido-despachante.vercel.app",
+  "telephone": "+554832543259",
+  "email": "kidodespachante@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Francisco Pacheco de Souza, 132",
+    "addressLocality": "Garopaba",
+    "addressRegion": "SC",
+    "postalCode": "88495-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -28.0247,
+    "longitude": -48.6197
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:30",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/kido.despachante"
+  ],
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "52"
+  }
+}
+</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9B42JG5XHN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9B42JG5XHN');
+  </script>
 </head>
 <body>
+<div id="scroll-progress"></div>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" role="alert">
+  <span>🍪 Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#">Política de Privacidade</a>.</span>
+  <button class="cookie-btn" onclick="acceptCookies()">Aceitar</button>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -960,6 +1115,8 @@
 </div>
 
 <!-- COMO FUNCIONA -->
+
+
 <section id="como-funciona">
   <div class="sec-label">Simples e rápido</div>
   <h2 class="sec-title">Como funciona?</h2>
@@ -1119,7 +1276,7 @@
   <h2 class="sec-title">Nossos clientes falam por nós</h2>
   <div class="sec-divider" style="margin:0.75rem auto 1rem"></div>
   <p class="sec-sub" style="margin-bottom:2.5rem;max-width:560px;margin-left:auto;margin-right:auto">Atendimento personalizado e de excelência. Confira o que dizem quem confia na Kido Despachante.</p>
-  <div class="dep-grid" style="text-align:left">
+  <div class="dep-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));" style="text-align:left">
     <div class="dep-card">
       <div class="dep-stars">★★★★★</div>
       <p class="dep-text">"Resolveram a transferência do meu carro em pouquíssimo tempo. Equipe atenciosa, super recomendo para quem não quer perder tempo no DETRAN."</p>
@@ -1156,10 +1313,44 @@
         </div>
       </div>
     </div>
+  
+    <div class="dep-card fade-up">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Atendimento excelente! Transferi minha moto sem precisar sair de casa. Super recomendo a Kido Despachante!"</p>
+      <div class="dep-autor">
+        <div class="dep-avatar">MR</div>
+        <div>
+          <strong>Marcos Rodrigues</strong>
+          <span>Garopaba, SC</span>
+        </div>
+      </div>
+    </div>
+    <div class="dep-card fade-up">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Fiz o licenciamento atrasado e eles resolveram rapidinho. Preço justo e sem enrolação. Nota 10!"</p>
+      <div class="dep-autor">
+        <div class="dep-avatar">CS</div>
+        <div>
+          <strong>Carla Souza</strong>
+          <span>Imbituba, SC</span>
+        </div>
+      </div>
+    </div>
+    <div class="dep-card fade-up">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Já uso os serviços da Kido há mais de 10 anos. Sempre confiável e pontual. Não troco por nada!"</p>
+      <div class="dep-autor">
+        <div class="dep-avatar">JP</div>
+        <div>
+          <strong>João Paulo</strong>
+          <span>Paulo Lopes, SC</span>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 </section>
 
-<!-- ORÇAMENTO -->
 <section id="orcamento">
   <div class="form-wrap">
     <div class="form-info">
@@ -1415,7 +1606,63 @@
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.522 5.852L.057 23.49a.5.5 0 00.611.61l5.78-1.517A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.031-1.383l-.36-.215-3.731.979.997-3.648-.236-.374A9.785 9.785 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
 </a>
 
-<script defer data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script defer data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+  // ── BARRA DE PROGRESSO SCROLL ──
+  const scrollBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (scrollBar) scrollBar.style.width = pct + '%';
+  }, { passive: true });
+
+  // ── COOKIE BANNER ──
+  function acceptCookies() {
+    document.getElementById('cookie-banner').classList.remove('show');
+    try { localStorage.setItem('cookies_accepted', '1'); } catch(e) {}
+  }
+  setTimeout(function() {
+    try {
+      if (!localStorage.getItem('cookies_accepted')) {
+        const banner = document.getElementById('cookie-banner');
+        if (banner) banner.classList.add('show');
+      }
+    } catch(e) {
+      const banner = document.getElementById('cookie-banner');
+      if (banner) banner.classList.add('show');
+    }
+  }, 1500);
+
+  // ── POPUP DE SAÍDA ──
+  let exitShown = false;
+  function closeExitPopup() {
+    document.getElementById('exit-popup').classList.remove('show');
+  }
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY <= 0 && !exitShown) {
+      exitShown = true;
+      document.getElementById('exit-popup').classList.add('show');
+    }
+  });
+  document.getElementById('exit-popup').addEventListener('click', function(e) {
+    if (e.target === this) closeExitPopup();
+  });
+  // Mobile: show after 40s of inactivity
+  let mobileExitTimer;
+  function resetMobileTimer() {
+    clearTimeout(mobileExitTimer);
+    mobileExitTimer = setTimeout(function() {
+      if (!exitShown && window.innerWidth < 768) {
+        exitShown = true;
+        document.getElementById('exit-popup').classList.add('show');
+      }
+    }, 40000);
+  }
+  ['touchstart','touchmove','scroll'].forEach(function(ev) {
+    window.addEventListener(ev, resetMobileTimer, { passive: true });
+  });
+  resetMobileTimer();
+</script><script>
   // ── FAQ accordion ──
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
