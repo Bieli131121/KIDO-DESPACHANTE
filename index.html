@@ -4,12 +4,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kido Despachante – Transferência, Licenciamento e Documentação Veicular em Garopaba/SC</title>
-  <meta name="description" content="Kido Despachante em Garopaba/SC. Mais de 30 anos resolvendo transferência de veículo, licenciamento, emplacamento, multas e documentação. Credenciado DETRAN/SC. Fale pelo WhatsApp!"/>
+  <meta name="description" content="Kido Despachante em Garopaba/SC. Mais de 37 anos resolvendo transferência de veículo, licenciamento, emplacamento, multas e documentação. Credenciado DETRAN/SC. Fale pelo WhatsApp!"/>
   <meta name="keywords" content="despachante Garopaba, transferência veículo Garopaba, licenciamento Garopaba, emplacamento SC, despachante DETRAN SC, documentação veicular Garopaba"/>
   <meta name="author" content="Kido Despachante Eireli"/>
   <meta name="robots" content="index, follow"/>
   <meta property="og:title" content="Kido Despachante – Garopaba/SC"/>
-  <meta property="og:description" content="Mais de 30 anos resolvendo sua documentação veicular em Garopaba/SC. Transferência, licenciamento, emplacamento e muito mais."/>
+  <meta property="og:description" content="Mais de 37 anos resolvendo sua documentação veicular em Garopaba/SC. Transferência, licenciamento, emplacamento e muito mais."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="pt_BR"/>
   <meta name="geo.region" content="BR-SC"/>
@@ -797,12 +797,76 @@
       .services-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 640px) {
+      /* Nav */
       .nav-links { display: none; }
-      .topbar-left { flex-direction: column; gap: .3rem; }
-      section { padding: 60px 5%; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-stats { gap: 1.5rem; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      nav { padding: .75rem 5%; }
+
+      /* Topbar */
+      .topbar-left { flex-direction: column; gap: .3rem; align-items: flex-start; }
+      .topbar { padding: .5rem 5%; font-size: .75rem; }
+
+      /* Sections */
+      section { padding: 52px 5%; }
+
+      /* Hero */
+      #hero { padding: 72px 5% 56px; text-align: center; }
+      #hero h1 { font-size: 2rem; line-height: 1.25; }
+      .hero-tag { font-size: .78rem; margin: 0 auto 1rem; }
+      .hero-desc { font-size: .9rem; }
+      .hero-btns { flex-direction: column; align-items: center; gap: .75rem; }
+      .hero-btns a { width: 100%; text-align: center; justify-content: center; }
+      .hero-stats { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+      .hero-stats > div { min-width: 80px; }
+      .stat-n { font-size: 1.8rem; }
+
+      /* Selos strip */
+      .selos-strip { gap: 1rem; flex-wrap: wrap; justify-content: center; padding: 1rem 5%; }
+      .selos-strip span { font-size: .78rem; }
+
+      /* Services */
+      .services-grid { grid-template-columns: 1fr 1fr; gap: .75rem; }
+      .service-card { padding: 1.25rem 1rem; }
+      .service-card h3 { font-size: .9rem; }
+      .service-card p { font-size: .78rem; }
+
+      /* Steps */
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
+      .steps-grid::before { display: none; }
+      .step { padding: 0 .5rem 1.5rem; }
+      .step-num { width: 56px; height: 56px; font-size: 1.1rem; }
+      .step h3 { font-size: .85rem; }
+
+      /* Sobre */
+      .sobre-wrap { gap: 1.5rem; }
+      .sobre-stats { grid-template-columns: 1fr 1fr; gap: .75rem; }
+
+      /* Parcela */
+      .parcela-wrap { gap: 1.5rem; }
+      .parcela-img { display: none; }
+
+      /* Formulário */
+      .form-wrap { gap: 1.5rem; }
+      .form-info { display: none; }
+      .form-box { padding: 1.5rem 1.25rem; }
+
+      /* Depoimentos */
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      /* FAQ */
+      .faq-q { font-size: .9rem; padding: 1rem 1.1rem; }
+      .faq-a { font-size: .85rem; }
+
+      /* Contato */
+      .contato-grid { gap: 1.5rem; }
+      .contato-info-item { font-size: .85rem; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+      .footer-tagline { font-size: .82rem; }
+
+      /* Typography */
+      .sec-title { font-size: 1.5rem; }
+      .sec-sub { font-size: .9rem; }
     }
 
     /* ── ANIMATIONS ── */
@@ -878,7 +942,7 @@
   <div class="selo-divider"></div>
   <div class="selo">
     <div class="selo-icon">📅</div>
-    <span><strong>+30 Anos</strong>No mercado</span>
+    <span><strong>+37 Anos</strong>No mercado</span>
   </div>
   <div class="selo-divider"></div>
   <div class="selo">
@@ -1010,7 +1074,7 @@
       </div>
       <div class="sobre-mini-grid">
         <div class="sobre-mini">
-          <strong>1994</strong>
+          <strong>1988</strong>
           <span>Fundação</span>
         </div>
         <div class="sobre-mini">
@@ -1032,11 +1096,11 @@
       <div class="sec-label">Sobre nós</div>
       <h2 class="sec-title">Tradição e confiança<br/>em Garopaba</h2>
       <div class="sec-divider"></div>
-      <p class="sec-sub">Desde dezembro de 1994, a Kido Despachante Eireli atua em Garopaba/SC com dedicação, competência e comprometimento na resolução de processos documentais.</p>
+      <p class="sec-sub">Desde dezembro de 1988, a Kido Despachante Eireli atua em Garopaba/SC com dedicação, competência e comprometimento na resolução de processos documentais.</p>
       <p class="sec-sub">Estamos credenciados ao DETRAN-SC e associados à ADOTESC, o que atesta nossa seriedade e compromisso com a legalidade em todos os processos que executamos.</p>
       <ul class="sobre-list">
         <li><span class="check">✓</span> Credenciada junto ao DETRAN/SC</li>
-        <li><span class="check">✓</span> Mais de 30 anos de atuação no mercado</li>
+        <li><span class="check">✓</span> Mais de 37 anos de atuação no mercado</li>
         <li><span class="check">✓</span> Atendimento personalizado e humanizado</li>
         <li><span class="check">✓</span> Localizada no centro de Garopaba/SC</li>
         <li><span class="check">✓</span> Empresa ativa e regularizada na Receita Federal</li>
@@ -1103,7 +1167,7 @@
       <div class="form-highlights">
         <div class="form-hl"><div class="form-hl-icon">⚡</div> Resposta rápida pelo WhatsApp</div>
         <div class="form-hl"><div class="form-hl-icon">🔒</div> Seus dados estão seguros conosco</div>
-        <div class="form-hl"><div class="form-hl-icon">✅</div> Mais de 30 anos de experiência</div>
+        <div class="form-hl"><div class="form-hl-icon">✅</div> Mais de 37 anos de experiência</div>
         <div class="form-hl"><div class="form-hl-icon">📍</div> Atendemos Garopaba e região</div>
       </div>
     </div>
@@ -1255,7 +1319,7 @@
   <div class="footer-grid">
     <div class="footer-logo">
       <img src="data:image/jpeg;base64,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" alt="Kido Despachante"/>
-      <p class="footer-tagline">O parceiro do condutor que transforma a burocracia em soluções. Mais de 30 anos servindo Garopaba e região.</p>
+      <p class="footer-tagline">O parceiro do condutor que transforma a burocracia em soluções. Mais de 37 anos servindo Garopaba e região.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/kido.despachante" target="_blank" class="social-ig" title="Instagram @kido.despachante">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -1363,15 +1427,18 @@
 
   // ── Contador animado ──
   function animateCounter(el) {
-    const target = parseInt(el.dataset.target);
+    const target = parseInt(el.dataset.target) || 0;
     const suffix = el.dataset.suffix || '';
     const prefix = el.dataset.prefix || '';
     const duration = 1800;
-    const step = target / (duration / 16);
+    const steps = duration / 16;
+    const step = target / steps;
     let current = 0;
+    let count = 0;
     const timer = setInterval(() => {
+      count++;
       current += step;
-      if (current >= target) {
+      if (count >= steps) {
         current = target;
         clearInterval(timer);
       }
@@ -1379,17 +1446,12 @@
     }, 16);
   }
 
-  // Dispara contador ao entrar na viewport
-  const counters = document.querySelectorAll('.stat-n[data-target]');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
+  // Dispara todos os contadores no load
+  window.addEventListener('load', function() {
+    document.querySelectorAll('.stat-n[data-target]').forEach(function(el) {
+      animateCounter(el);
     });
-  }, { threshold: 0.5 });
-  counters.forEach(c => observer.observe(c));
+  });
 
   // ── Animações de scroll ──
   const fadeEls = document.querySelectorAll('.fade-up');
